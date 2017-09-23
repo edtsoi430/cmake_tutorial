@@ -1,0 +1,6 @@
+*.swp
+*.bak
+*.o
+*.a
+*.aux
+*.log
