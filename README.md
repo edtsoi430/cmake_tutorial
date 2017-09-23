@@ -180,14 +180,14 @@ to use by adding a number after the `-j`. For example `-j4` will use 4 cores.
 
 ## Time to Practice
 
-To get some practice with CMake, you a copy of MAAV's project 1 is located here without any of the
+To get some practice with CMake, a copy of MAAV's project 1 is located here without any of the
 CMake files. It is your job get this to compile. We have given you all the Find files you need in
-the *cmake* directory. The only external libraries you need to link are *GTKMM*m *GLM*, and *Epoxy*.
+the *cmake* directory. The only external libraries you need to link are *GTKMM* *GLM*, and *Epoxy*.
 There is only one executable so you should link everything to it. There is also an install script in
 the *scripts* directory to install these external libraries for you. To execute it, just type
 `./install-deps.sh` into your terminal from the *scripts* directory and enter your sudo password.
 
-Note that *Epoxy* and *GTKMM* use their own system (namely `pkg-config`)for finding their files.
+Note that *Epoxy* and *GTKMM* use their own system (called `pkg-config`) for finding their files.
 
 Instead of
 ```
@@ -204,10 +204,10 @@ pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
 This will have the same effect as if you had done `find_package()`. You can link *GLM* in the
 original way described before this using `find_package()`.
 
-This covers only that basics of CMake. You can do much, much more with it. You can learn more by
+This covers only the basics of CMake. You can do much, much more with it. You can learn more by
 doing any of the following:
 
-* Looking through the MAAV repo for *CMakeLists.tst*
+* Looking through the MAAV repo for *CMakeLists.txt*
 * Practicing on your own projects (or on MAAV projects)
 * Looking at documentation here: https://devdocs.io/cmake~3.9/
 * CMake tutorial and documentation on their website:
