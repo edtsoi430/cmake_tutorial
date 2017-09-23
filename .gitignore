@@ -4,3 +4,5 @@
 *.a
 *.aux
 *.log
+build
+build/*
