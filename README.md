@@ -169,8 +169,8 @@ target_link_libraries(my-executable
  *GTKMM*. *GTKMM* is dependent on *EPOXY* in our case so it must be listed first:
 
  ```
- target_link_libraries(my-executable
- 	${EPOXY_LIBRARIES}
+target_link_libraries(my-executable
+	${EPOXY_LIBRARIES}
 	${GTKMM_LIBRARIES}
 )
  ```
