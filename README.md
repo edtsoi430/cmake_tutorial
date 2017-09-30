@@ -163,6 +163,23 @@ target_link_libraries(my-executable
 )
  ```
 
+ Please note that for the `target_link_libraries()` command, some libraries need to be listed before
+ others. If you are using an external library _A_ that depends on another external library _B_, you
+ must list library _B_ first. In the project described below, you will have to link *EPOXY* and
+ *GTKMM*. *GTKMM* is dependent on *EPOXY* in our case so it must be listed first:
+
+ ```
+ target_link_libraries(my-executable
+ 	${EPOXY_LIBRARIES}
+	${GTKMM_LIBRARIES}
+)
+ ```
+
+ The reason we use `${<name>-LIBRARIES}` here instead of `${<name>-LIBRARY}` as in the previous
+ example is simply because those are the variables defined in the Find file for these libraries. If
+ you want to be certain you are using the correct variable name, check the Find file (or take a
+ guess, its usually one or the other).
+
 ## Building the project
 
 To build the project, you must go to your *build* directory and execute the following commands:
