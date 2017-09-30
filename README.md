@@ -151,7 +151,7 @@ Here is a simple example:
 
 ```
 find_package(ZCM REQUIRED)
-include_directories(${ZCM_INCLUDE_DIRS})
+include_directories(my-executable ${ZCM_INCLUDE_DIRS})
 add_executable(my-executable
 	my-executable.cpp
 	Dependency.cpp
